@@ -1,0 +1,25 @@
+﻿services:
+  web-app:
+    image: webapplication1
+    build:
+      context: .
+      dockerfile: WebApplication1/Dockerfile
+    ports:
+      - "8080:8080"
+    container_name: web-app
+    depends_on:
+      - postgres
+    
+  postgres:
+    image: postgres:latest
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    volumes:
+      - postgres:/var/lib/postgresql
+    container_name: postgres
+
+volumes:
+  postgres:
