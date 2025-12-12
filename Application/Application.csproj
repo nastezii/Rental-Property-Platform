@@ -12,7 +12,6 @@
     </ItemGroup>
 
     <ItemGroup>
-      <Folder Include="BaseService\" />
       <Folder Include="BookingService\" />
       <Folder Include="ListingService\" />
       <Folder Include="PropertyAmenityService\" />
