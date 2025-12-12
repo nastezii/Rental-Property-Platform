@@ -1,5 +1,4 @@
 ﻿using Domain.Entities.Base;
-using System.Reflection;
 
 namespace Domain.Entities;
 
@@ -11,4 +10,5 @@ public class Booking : TrackingEntity
     public DateTime EndDate { get; set; }
 
     public User Tenant { get; set; } = null!;
+    public Listing Listing { get; set; } = null!;
 }

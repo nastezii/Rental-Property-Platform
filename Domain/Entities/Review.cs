@@ -9,5 +9,6 @@ public class Review : TrackingEntity
     public int Rating { get; set; }
     public string Comment { get; set; } = string.Empty;
 
-    public User Reviewer { get; set; } = null!;
+    public User Reviewer { get; set; } = null!; 
+    public Property Property { get; set; } = null!;
 }
