@@ -11,4 +11,6 @@ public class User : TrackingEntity
     public string PasswordHash { get; set; } = string.Empty;
 
     public List<Property> Properties { get; set; } = [];
+    public List<Booking> Bookings { get; set; } = [];
+    public List<Review> Reviews { get; set; } = [];
 }
