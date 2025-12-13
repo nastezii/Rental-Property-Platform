@@ -131,7 +131,7 @@ public class BaseRepository<T> : IBaseRepository<T> where T : BaseEntity
 
     public async Task CommitTransactionAsync()
     {
-        if (_transaction != null)
+        if (_transaction == null)
             throw new InvalidOperationException("Transaction has not been started");
 
         try
@@ -167,6 +167,10 @@ public class BaseRepository<T> : IBaseRepository<T> where T : BaseEntity
         catch (Exception)
         {
             throw ex;
+        }
+        finally
+        { 
+            await _transaction.DisposeAsync();
         }
     }
 
