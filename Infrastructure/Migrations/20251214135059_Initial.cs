@@ -275,6 +275,9 @@ namespace Infrastructure.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
+                name: "bookings");
+
+            migrationBuilder.DropTable(
                 name: "property_amenities");
 
             migrationBuilder.DropTable(
