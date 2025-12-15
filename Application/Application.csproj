@@ -11,12 +11,4 @@
       <ProjectReference Include="..\Infrastructure\Infrastructure.csproj" />
     </ItemGroup>
 
-    <ItemGroup>
-      <Folder Include="BookingService\" />
-      <Folder Include="ListingService\" />
-      <Folder Include="PropertyAmenityService\" />
-      <Folder Include="PropertyService\" />
-      <Folder Include="UserService\" />
-    </ItemGroup>
-
 </Project>
